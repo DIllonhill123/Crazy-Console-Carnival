@@ -15,11 +15,11 @@ namespace TextCarnival_2._0.Source.CarnivalGames.AllCarnivalGames
         public abstract void play()
         {
             Random Rando = new Random();
-            int rd1 = 0;
-            int rd2 = 0;
-            int rd3 = 0;
-            int rd4 = 0;
-            int rd5 = 0;
+            int rd1 = Rando(1, 4);
+            int rd2 = Rando(1, 4);
+            int rd3 = Rando(1, 4);
+            int rd4 = Rando(1, 4);
+            int rd5 = Rando(1, 4);
             int Ans = 0;
 
             showTitle("WELCOME TO SIMON");
@@ -43,7 +43,6 @@ namespace TextCarnival_2._0.Source.CarnivalGames.AllCarnivalGames
             writeLine("3 is"); beep(600);
             writeLine("4 is"); beep(900, 1);
 
-            rd1 = Rando(1, 4);
                 if (rd1 == 1) {
                     beep(100);
                 }
@@ -56,7 +55,7 @@ namespace TextCarnival_2._0.Source.CarnivalGames.AllCarnivalGames
                 if (RD == 4) {
                     beep(900, 1);
                 }
-                writeLine("NEter your answer:");
+                writeLine("Enter your answer:");
                 Ans == readLine();
                 if(Ans == rd1)
                 {
