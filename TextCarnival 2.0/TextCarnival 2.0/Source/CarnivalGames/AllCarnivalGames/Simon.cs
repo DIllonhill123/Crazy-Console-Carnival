@@ -62,25 +62,44 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 {
                     beep(900, 1);
                 }
-
-                writeLine("Enter your answer:");
-                Ans = getInput();
-                a = Convert.ToInt32(Ans);
-
-                if (a == rd1 && counter == 0)
+                if (counter == 0)
                 {
-                    writeLine("Correct!");
-                    counter++;
-                    writeOut("Round 2");
+                    writeLine("Enter your answer:");
+                    Ans = getInput();
+                    a = Convert.ToInt32(Ans);
+
+
+                    if (a == rd1)
+                    {
+                        writeLine("Correct!");
+                        counter++;
+                        writeOut("Round 2");
+                    }
+                    if (a != rd1 && counter == 0)
+                    {
+                        writeLine("Wrong! You Lose!");
+                        isCorrect = false;
+                    }
                 }
-                if(a != rd1 && counter == 0)
-                {
-                    writeLine("Wrong! You Lose!");
-                    isCorrect = false;
-                }
 
-                if (counter >= 1)
+                if (counter >= 1 && isCorrect == true)
                 {
+                    if (rd1 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd1 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd1 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd1 == 4)
+                    {
+                        beep(900, 1);
+                    }
                     if (rd2 == 1)
                     {
                         beep(100, 1);
@@ -97,28 +116,63 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     {
                         beep(900, 1);
                     }
-
-                    writeLine("Enter your answers:");
-                    Ans = getInput();
-                    Ans2 = getInput();
-                    a = Convert.ToInt32(Ans);
-                    b = Convert.ToInt32(Ans2);
-
-                    if (b == rd2 && a == rd1 && counter == 1)
+                    if(counter == 1)
                     {
-                        writeLine("Correct!");
-                        counter++;
-                        writeOut("Round 3");
+                        writeLine("Enter your answers:");
+                        Ans = getInput();
+                        Ans2 = getInput();
+                        a = Convert.ToInt32(Ans);
+                        b = Convert.ToInt32(Ans2);
+
+                        if (b == rd2 && a == rd1)
+                        {
+                            writeLine("Correct!");
+                            counter++;
+                            writeOut("Round 3");
+                        }
+                        if (b != rd2)
+                        {
+                            writeLine("Wrong! You Lose!");
+                            isCorrect = false;
+                        }
                     }
-                    if(b != rd2)
-                    {
-                        writeLine("Wrong! You Lose!");
-                        isCorrect = false;
-                    }
+                   
 
                 }
-                if (counter >= 2)
+                if (counter >= 2 && isCorrect == true)
                 {
+                    if (rd1 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd1 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd1 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd1 == 4)
+                    {
+                        beep(900, 1);
+                    }
+                    if (rd2 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd2 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd2 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd2 == 4)
+                    {
+                        beep(900, 1);
+                    }
                     if (rd3 == 1)
                     {
                         beep(100, 1);
@@ -135,29 +189,79 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     {
                         beep(900, 1);
                     }
-
-                    writeLine("Enter your answer:");
-                    Ans = getInput();
-                    Ans2 = getInput();
-                    Ans3 = getInput();
-                    a = Convert.ToInt32(Ans);
-                    b = Convert.ToInt32(Ans2);
-                    c = Convert.ToInt32(Ans3);
-
-                    if (c == rd3 && b == rd2 && a == rd1 && counter == 3)
+                    if(counter == 3)
                     {
-                        writeLine("Correct!");
-                        counter++;
-                    }
-                    if(c != rd3)
-                    {
-                        writeLine("Wrong! You Lose!");
-                        isCorrect = false;
+                        writeLine("Enter your answer:");
+                        Ans = getInput();
+                        Ans2 = getInput();
+                        Ans3 = getInput();
+                        a = Convert.ToInt32(Ans);
+                        b = Convert.ToInt32(Ans2);
+                        c = Convert.ToInt32(Ans3);
+
+                        if (c == rd3 && b == rd2 && a == rd1 && counter == 2)
+                        {
+                            writeLine("Correct!");
+                            counter++;
+                        }
+                        if (c != rd3)
+                        {
+                            writeLine("Wrong! You Lose!");
+                            isCorrect = false;
+                        }
                     }
 
                 }
-                if (counter >= 3)
+                if (counter >= 3 && isCorrect == true)
                 {
+                    if (rd1 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd1 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd1 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd1 == 4)
+                    {
+                        beep(900, 1);
+                    }
+                    if (rd2 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd2 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd2 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd2 == 4)
+                    {
+                        beep(900, 1);
+                    }
+                    if (rd3 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd3 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd3 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd3 == 4)
+                    {
+                        beep(900, 1);
+                    }
                     if (rd4 == 1)
                     {
                         beep(100, 1);
@@ -174,31 +278,97 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     {
                         beep(900, 1);
                     }
-
-                    writeLine("Enter your answer:");
-                    Ans = getInput();
-                    Ans2 = getInput();
-                    Ans3 = getInput();
-                    Ans4 = getInput();
-                    a = Convert.ToInt32(Ans);
-                    b = Convert.ToInt32(Ans2);
-                    c = Convert.ToInt32(Ans3);
-                    d = Convert.ToInt32(Ans4);
-
-                    if (d == rd4 && c ==rd3 && b == rd2 && a == rd1 && counter == 4)
+                    if(counter == 3)
                     {
-                        writeLine("Correct!");
-                        counter++;
-                    }
-                    if(d != rd4)
-                    {
-                        writeLine("Wrong! You Lose!");
-                        isCorrect = false;
-                    }
+                        writeLine("Enter your answers:");
+                        Ans = getInput();
+                        Ans2 = getInput();
+                        Ans3 = getInput();
+                        Ans4 = getInput();
+                        a = Convert.ToInt32(Ans);
+                        b = Convert.ToInt32(Ans2);
+                        c = Convert.ToInt32(Ans3);
+                        d = Convert.ToInt32(Ans4);
 
+                        if (d == rd4 && c == rd3 && b == rd2 && a == rd1 && counter == 4)
+                        {
+                            writeLine("Correct!");
+                            counter++;
+                            writeLine("Round 4");
+                        }
+                        if (d != rd4)
+                        {
+                            writeLine("Wrong! You Lose!");
+                            isCorrect = false;
+                        }
+                    }
                 }
-                if (counter >= 4)
+                if (counter >= 4 && isCorrect == true)
                 {
+                    if (rd1 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd1 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd1 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd1 == 4)
+                    {
+                        beep(900, 1);
+                    }
+                    if (rd2 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd2 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd2 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd2 == 4)
+                    {
+                        beep(900, 1);
+                    }
+                    if (rd3 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd3 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd3 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd3 == 4)
+                    {
+                        beep(900, 1);
+                    }
+                    if (rd4 == 1)
+                    {
+                        beep(100, 1);
+                    }
+                    if (rd4 == 2)
+                    {
+                        beep(300, 1);
+                    }
+                    if (rd4 == 3)
+                    {
+                        beep(600, 1);
+                    }
+                    if (rd4 == 4)
+                    {
+                        beep(900, 1);
+                    }
                     if (rd5 == 1)
                     {
                         beep(100, 1);
@@ -215,37 +385,36 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     {
                         beep(900, 1);
                     }
-
-                    writeLine("Enter your answer:");
-                    Ans = getInput();
-                    Ans2 = getInput();
-                    Ans3 = getInput();
-                    Ans4 = getInput();
-                    Ans5 = getInput();
-                    a = Convert.ToInt32(Ans);
-                    b = Convert.ToInt32(Ans2);
-                    c = Convert.ToInt32(Ans3);
-                    d = Convert.ToInt32(Ans4);
-                    e = Convert.ToInt32(Ans5);
-
-                    if (e == rd5 && d == rd4 && c == rd3 && b == rd2 && a == rd1 && counter == 5)
+                    if(counter == 5)
                     {
-                        writeLine("Correct!");
-                        counter++;
-                        writeOut("YOU WIN!!");
-                    }
-                    if(e != rd5)
-                    {
-                        writeLine("Wrong! You Lose!");
-                        isCorrect = false;
-                    }
+                        writeLine("Enter your answer:");
+                        Ans = getInput();
+                        Ans2 = getInput();
+                        Ans3 = getInput();
+                        Ans4 = getInput();
+                        Ans5 = getInput();
+                        a = Convert.ToInt32(Ans);
+                        b = Convert.ToInt32(Ans2);
+                        c = Convert.ToInt32(Ans3);
+                        d = Convert.ToInt32(Ans4);
+                        e = Convert.ToInt32(Ans5);
 
+                        if (e == rd5 && d == rd4 && c == rd3 && b == rd2 && a == rd1 && counter == 5)
+                        {
+                            writeLine("Correct!");
+                            counter++;
+                            writeOut("YOU WIN!!");
+                        }
+                        if (e != rd5)
+                        {
+                            writeLine("Wrong! You Lose!");
+                            isCorrect = false;
+                        }
+                    }
                 }
             }
-
-
-
         }
+
     }
 }
     
