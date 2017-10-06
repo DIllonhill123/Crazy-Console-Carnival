@@ -32,20 +32,30 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             string Ans4;
             string Ans5;
             bool isCorrect = true;
+            string ready;
+            bool start= false;
 
             showTitle("WELCOME TO SIMON");
-            writeLine("This version of simon is based off of sounds");
-            writeLine("There are 4 different sounds and you should return them in the order you hear them");
-            writeLine("return the correct order 5 times and you win!");
+            writeOut("This version of simon is based off of sounds");
+            writeOut("There are 4 different sounds and you should return them in the order you hear them");
+            writeOut("return the correct order 5 times and you win!");
 
-            writeLine("each sound is assigned to a number 1-4");
-            writeLine("1 is"); beep(100, 1);
-            writeLine("2 is"); beep(300, 1);
-            writeLine("3 is"); beep(600, 1);
-            writeLine("4 is"); beep(900, 1);
-
-            while(isCorrect == true || counter <= 5)
+            while(start == false)
             {
+                writeLine("each sound is assigned to a number 1-4");
+                writeLine("1 is"); beep(100, 1);
+                writeLine("2 is"); beep(300, 1);
+                writeLine("3 is"); beep(600, 1);
+                writeLine("4 is"); beep(900, 1);
+                writeLine("Are you ready to play? type [yes] to play, type [no] to here the sounds again");
+                ready = getInput();
+                if (ready == "yes")
+                {
+                    start = true;
+                }
+            }
+            writeOut("ROUND 1");
+
                 if (rd1 == 1)
                 {
                     beep(100, 1);
@@ -73,7 +83,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     {
                         writeLine("Correct!");
                         counter++;
-                        writeOut("Round 2");
+                        writeOut("ROUND 2");
                     }
                     if (a != rd1 && counter == 0)
                     {
@@ -128,7 +138,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                         {
                             writeLine("Correct!");
                             counter++;
-                            writeOut("Round 3");
+                            writeOut("ROUND 3");
                         }
                         if (b != rd2)
                         {
@@ -189,7 +199,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     {
                         beep(900, 1);
                     }
-                    if(counter == 3)
+                    if(counter == 2)
                     {
                         writeLine("Enter your answer:");
                         Ans = getInput();
@@ -203,6 +213,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                         {
                             writeLine("Correct!");
                             counter++;
+                        writeOut("ROUND 4");
                         }
                         if (c != rd3)
                         {
@@ -290,7 +301,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                         c = Convert.ToInt32(Ans3);
                         d = Convert.ToInt32(Ans4);
 
-                        if (d == rd4 && c == rd3 && b == rd2 && a == rd1 && counter == 4)
+                        if (d == rd4 && c == rd3 && b == rd2 && a == rd1)
                         {
                             writeLine("Correct!");
                             counter++;
@@ -385,7 +396,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     {
                         beep(900, 1);
                     }
-                    if(counter == 5)
+                    if(counter == 4)
                     {
                         writeLine("Enter your answer:");
                         Ans = getInput();
@@ -399,7 +410,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                         d = Convert.ToInt32(Ans4);
                         e = Convert.ToInt32(Ans5);
 
-                        if (e == rd5 && d == rd4 && c == rd3 && b == rd2 && a == rd1 && counter == 5)
+                        if (e == rd5 && d == rd4 && c == rd3 && b == rd2 && a == rd1)
                         {
                             writeLine("Correct!");
                             counter++;
@@ -412,7 +423,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                         }
                     }
                 }
-            }
+            
         }
 
     }
