@@ -42,11 +42,11 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
             while(start == false)
             {
-                writeLine("each sound is assigned to a number 1-4");
-                writeLine("1 is"); beep(100, 1);
-                writeLine("2 is"); beep(300, 1);
-                writeLine("3 is"); beep(600, 1);
-                writeLine("4 is"); beep(900, 1);
+                writeOut("each sound is assigned to a number 1-4");
+                writeLine("1 is"); beep(100, 1); wait(1);
+                writeLine("2 is"); beep(300, 1); wait(1);
+                writeLine("3 is"); beep(600, 1); wait(1);
+                writeLine("4 is"); beep(900, 1); wait(1);
                 writeLine("Are you ready to play? type [yes] to play, type [no] to here the sounds again");
                 ready = getInput();
                 if (ready == "yes")
